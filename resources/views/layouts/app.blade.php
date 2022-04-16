@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>App Layout -@yield('title')</title>
     </head>
-    <body>
+    <body style="background-color: red">
         <div>
             @yield('content')
         </div>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Contact Page')
+@section('title', 'Posts Page')
 
 @section('content')
 @if($post['exists'] == 'true')
