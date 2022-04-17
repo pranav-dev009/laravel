@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('title', 'Posts Page')
 
@@ -17,4 +17,11 @@
 @isset($post['life'])
     <div>Life dikha</div>
 @endisset
+@endsection --}}
+@extends('layouts.app')
+
+@section('title', $post['title'])
+
+@section('content')
+    {{ $post['content'] }}
 @endsection

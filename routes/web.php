@@ -23,12 +23,13 @@ Route::get('/', [HomeController::class, 'home'])
 Route::get('/contact', [HomeController::class, 'contact'])
 ->name('home.contact');
 
-Route::get('/single', AboutController::class)
+Route::get('/single', AboutController::class) 
 ->name('about.single');
 
-Route::resource('posts', PostsController::class)->only('index', 'show');
+Route::resource('posts', PostsController::class)
+->only(['index', 'show', 'create', 'store', 'edit', 'update', 'destroy']);
 // Route::get('/posts', function(Request $request) use($posts) {
-//     // dd(request()->all());
+//     // dd(request()->all()); 
 //     dd((int)request()->query('page', 1));
 //     return view('posts.index', ['posts' => $posts]);
 // });

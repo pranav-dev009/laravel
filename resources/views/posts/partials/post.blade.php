@@ -1,5 +1,12 @@
 @if ($loop->odd)
-<div>{{ $key }}.{{ $post['name'] }}</div>
+<div>{{ $key }}.{{ $post->title }}</div>
 @else
-<div style="background-color: blue">{{ $key }}.{{ $post['name'] }}</div>
+<div style="background-color: blue">{{ $key }}.{{ $post->title }}</div>
 @endif
+<div>
+    <form action="{{ route('posts.destroy', ['post' => $post->id]) }}" method="POST">
+        @csrf
+        @method('DELETE');
+        <input type="submit" value="Delete">
+    </form>
+</div>
